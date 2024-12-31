@@ -54,6 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Center(
           child: Column(
+            crossAxisAlignment:
+                CrossAxisAlignment.center, // Use .end for right alignment
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Text(
@@ -64,6 +66,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue, // Background color
+                  foregroundColor: Colors.white, // Text color
+                  elevation: 20, // Remove elevation
+                  shape: RoundedRectangleBorder(
+                    // Border radius
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
                 onPressed: () {
                   setState(() {
                     _counter = 0; // Reset the counter to zero
